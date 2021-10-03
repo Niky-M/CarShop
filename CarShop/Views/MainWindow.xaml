@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:CarShop.Views"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="800" Width="1400">
-    <Border  BorderThickness="10" BorderBrush="#FF513B80">
-        <Grid Background="#FF513B80" >
+        Title="MainWindow" Height="800" Width="1200">
+    <Border  BorderThickness="10" BorderBrush="#FF4D4C4F">
+        <Grid Background="#FFBCACE6" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="4*"/>
@@ -24,37 +24,37 @@
             <StackPanel Grid.Column="1">
 
 
-                <Grid x:Name="LayoutRoot" Background="White" Height="690">
+                <Grid x:Name="LayoutRoot" Height="690" Background="#FFBCACE6">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="40*"/>
                         <ColumnDefinition Width="60*"/>
                     </Grid.ColumnDefinitions>
 
                     <StackPanel>
-                        <Label Content="Имя" Grid.Column="0" Margin="5" Cursor="ScrollW" Foreground="#FF572352" Background="White" BorderBrush="Black"/>
+                        <TextBlock Text="Имя" Margin="5"/>
                         <ComboBox Name="fio" Width="400" Height="20" IsEditable="True" 
                           ItemsSource="{Binding Clients}" 
-                          SelectedValuePath="ClientId" 
+                          SelectedValuePath="ClientID" 
                           DisplayMemberPath="Name"/>
-                        <TextBlock Text="Марка"/>
-                        <ComboBox Name="mark" IsEditable="True"
+                        <TextBlock Text="Марка" Margin="5"/>
+                        <ComboBox Name="mark" IsEditable="True" Width="400"
                                   ItemsSource="{Binding Brand}" 
-                          SelectedValuePath="BrandId" 
+                          SelectedValuePath="BrandID" 
                           DisplayMemberPath="BrandName"/>
-                        <TextBlock Text="Модель"/>
-                        <ComboBox Name="model" IsEditable="True"
+                        <TextBlock Text="Модель" Margin="5"/>
+                        <ComboBox Name="model" IsEditable="True" Width="400"
                                   ItemsSource="{Binding Model}" 
-                          SelectedValuePath="ModelId" 
+                          SelectedValuePath="ModelID" 
                           DisplayMemberPath="ModelName"/>
-                        <TextBlock Text="Год"/>
-                        <ComboBox Name="year" IsEditable="True"
+                        <TextBlock Text="Год" Margin="5"/>
+                        <ComboBox Name="year" IsEditable="True" Width="400"
                                   ItemsSource="{Binding Complication}" 
-                          SelectedValuePath="ComplicationId" 
+                          SelectedValuePath="ComplicationID" 
                           DisplayMemberPath="ComplicationName"/>
-                        <TextBlock Text="Продавец"/>
-                        <ComboBox Name="stuff" IsEditable="True"
+                        <TextBlock Text="Продавец" Margin="5"/>
+                        <ComboBox Name="stuff" IsEditable="True" Width="400"
                                   ItemsSource="{Binding Cars}" 
-                          SelectedValuePath="CarId" 
+                          SelectedValuePath="CarID" 
                           DisplayMemberPath="Year"/>
                         <Button x:Name="confirm_name" Content="Подтвердить" Width="100" Height="30" Margin="0 10" Grid.Column="0" Click="ConfirmName"/>
                     </StackPanel>
@@ -63,9 +63,8 @@
                       ItemsSource="{Binding Orders}" SelectedItem="{Binding SelectedOrder}"
                        
                       VerticalGridLinesBrush="#FFB04747" Background="#FFBCACE6">
-                        <!--SelectionChanged="client_SelectionChanged"-->
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="заказ" Binding="{Binding OrderId}"/>
+                            <DataGridTextColumn Header="заказ" Binding="{Binding OrderID}"/>
                             <DataGridTextColumn Header="ФИО" Binding="{Binding Client.Name}"/>
                             <DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
                             <DataGridTextColumn Header="Дата" Binding="{Binding Data}"/>
