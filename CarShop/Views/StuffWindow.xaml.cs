@@ -21,5 +21,36 @@ namespace CarShop.Views
         {
             InitializeComponent();
         }
+
+        private void ShopButton(object sender, RoutedEventArgs e)
+        {
+            var shop = new MainWindow();
+            shop.Show();
+            Close();
+        }
+
+        private void CarsButton(object sender, RoutedEventArgs e)
+        {
+            var car = new CarsWindow();
+            car.Show();
+            Close();
+        }
+
+        private void ClientButton(object sender, RoutedEventArgs e)
+        {
+            var client = new ClientWindow();
+            client.Show();
+            Close();
+        }
+
+        private void ProfitButton(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonAddClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

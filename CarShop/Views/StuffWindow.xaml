@@ -18,7 +18,7 @@
                 <Button Grid.Row="1" Content="В наличии" FontSize="25" Margin="5" Click="CarsButton"/>
                 <Button Grid.Row="3" Content="Клиенты" FontSize="25" Margin="5" Click="ClientButton"/>
                 <Button Grid.Row="4" Content="Сотрудники" FontSize="25" Margin="5" IsEnabled="False" Foreground="#FFAA9898"/>
-                <Button Grid.Row="5" Content="Прибыль" FontSize="25" Margin="5" Click="ProfitButton"/>
+                <Button Content="Прибыль" FontSize="25" Click="ProfitButton"/>
             </StackPanel>
 
             <Grid Height="720" Grid.Column="1">
